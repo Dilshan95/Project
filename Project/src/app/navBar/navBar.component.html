@@ -1,27 +1,27 @@
 <nav style="background-color:#660000 " class="navbar navbar-expand-lg">
+  <div class="container">
   <div class="navbar-header">
     <a class="navbar-brand" href="https://www.kln.ac.lk/"><img src="/assets/images/UOK.png" alt="University of Kelaniya">
     </a>
   </div>
-
-<ul class="nav nav-pills">
-  <div>
-      <h3 style="text-decoration-color: black">Transport Division</h3>
-      <h4>University of Kelaniya</h4>
+  <div id="heading">
+      <h5 style="color:#ffffff; margin-left: -75%">Transport Division</h5>
+      <h6 style="color:#ffffff; margin-left: -73%">University of Kelaniya</h6>
   </div>
-  
-        <li class="nav-item">
-        <a class="nav-link active" href="#">Reservations</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Vehicles</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Drivers</a>
-        </li>
-      </ul>
-      <div class="btn float-right">
-          <button type="button" class="btn btn-primary">Right Align Button</button>
+  <div>
+    <ul class="nav nav-pills" style="margin-left:-40%">
+      <li class="nav-item">
+        <button class="nav-link btn button1" (click)="reservations()">Reservations</button>
+      </li>
+      <li class="nav-item">
+      <button class="nav-link btn button1" (click)="vehicles()">Vehicles</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link btn button1" (click)="drivers()">Drivers</button>
+      </li>
+    </ul>
+  </div>
+          <button type="button" class="btn btn-primary">Log Out</button>
       </div>
-
+    
 </nav>

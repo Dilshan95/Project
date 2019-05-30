@@ -1,0 +1,72 @@
+<app-navBar></app-navBar>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="View Vehicles">
+    <div style="margin-top: 100px">
+      <div class="mat-elevation-z8 data-table">
+          
+        <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+             
+                 
+                 <ng-container matColumnDef="type">
+                   <th mat-header-cell *matHeaderCellDef mat-sort-header>Type of Vehicle</th>
+                   <td mat-cell *matCellDef="let row">{{row.type}}</td>
+                 </ng-container>
+             
+                 <ng-container matColumnDef="regNo">
+                   <th mat-header-cell *matHeaderCellDef mat-sort-header>Reg. No</th>
+                   <td mat-cell *matCellDef="let row">{{row.regNo}}</td>
+                 </ng-container>
+                 
+                 <ng-container matColumnDef="engineNo">
+                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Engine No</th>
+                     <td mat-cell *matCellDef="let row">{{row.engineNo}}</td>
+                   </ng-container>
+      
+                   <ng-container matColumnDef="chassisNo">
+                       <th mat-header-cell *matHeaderCellDef mat-sort-header>Chassis No</th>
+                       <td mat-cell *matCellDef="let row">{{row.chassisNo}}</td>
+                   </ng-container>
+      
+                   <ng-container matColumnDef="seats">
+                       <th mat-header-cell *matHeaderCellDef mat-sort-header>No. of Seats</th>
+                       <td mat-cell *matCellDef="let row">{{row.seats}}</td>
+                   </ng-container>
+      
+                   <ng-container matColumnDef="fuelType">
+                       <th mat-header-cell *matHeaderCellDef mat-sort-header>Type of Fuel</th>
+                       <td mat-cell *matCellDef="let row">{{row.fuelType}}</td>
+                   </ng-container>
+      
+                   <ng-container matColumnDef="manufactureYear">
+                       <th mat-header-cell *matHeaderCellDef mat-sort-header>Year of Manufacture</th>
+                       <td mat-cell *matCellDef="let row">{{row.manufactureYear}}</td>
+                   </ng-container>
+      
+                   <ng-container matColumnDef="registeredYear">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Registered Year</th>
+                    <td mat-cell *matCellDef="let row">{{row.registeredYear}}</td>
+                  </ng-container>
+      
+                  <ng-container matColumnDef="institute">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Institute to which the vehicle has been registered</th>
+                    <td mat-cell *matCellDef="let row">{{row.institute}}</td>
+                  </ng-container>
+      
+                  
+             
+                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       </table>
+             
+       <mat-paginator #paginator
+           [length]="5"
+           [pageIndex]="0"
+           [pageSize]="5"
+           [pageSizeOptions]="[5, 10, 100, 250]">
+       </mat-paginator>
+      </div> 
+      </div>
+  </mat-tab>
+  <mat-tab label="Add Vehicle"></mat-tab>
+</mat-tab-group>
+
