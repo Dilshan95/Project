@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <label>Update Faculty Information</label>
+    <button (click)="close()" class="btn btn-light" style="position: relative; left:45%;">X</button>
+  </mat-toolbar>
+          
+  <form [formGroup]="facultyForm" (ngSubmit)="updateFaculty()">   
+  <mat-list>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input formControlName="Name"  matInput placeholder="Name">
+      </mat-form-field>
+    </mat-list-item> 
+
+    <mat-list-item>
+      <mat-form-field >
+       <input formControlName="DeanName"  matInput placeholder="Dean's Name">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input formControlName="DeanMail"  matInput placeholder="Dean's Mail Address">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input formControlName="DeanPhoneNumber" matInput placeholder="Dean's Phone Number">
+      </mat-form-field>
+    </mat-list-item>
+
+
+
+  <div class="button-row" >
+    <button mat-raised-button color="primary" type="submit">Update</button>
+   
+</div>  
+</mat-list>   
+
+</form>
+</div>

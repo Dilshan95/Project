@@ -1,0 +1,93 @@
+<form [formGroup]="vehicleForm" (ngSubmit)="submit()">
+  <h2 style="text-align: center; margin-top: 40px;">Add Vehicle</h2>
+    <div id="card-container">
+       
+  
+    <mat-card id="XYZ" class="Vehicle-card">
+        <mat-list>
+    <mat-list-item>
+      <mat-form-field>
+       <input  formControlName="_id"  matInput placeholder="Vehicle ID">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field>
+          <mat-select formControlName="VehicleType"  placeholder="Vehicle Type">
+            <ng-container *ngFor="let vehicleType of vehicleTypes">
+              <mat-option [value]="vehicleType">{{vehicleType}}
+                </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="RegNo"  matInput placeholder="Registered No">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="EngineNo"  matInput placeholder="Engine No">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="ChassisNo"  matInput placeholder="Chassis No">
+      </mat-form-field>
+    </mat-list-item>
+    </mat-list>
+  </mat-card>
+
+  <mat-card id="ABC" class="Vehicle-card">
+      <mat-list>
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="NoofSeats"  matInput placeholder="Number of Seats">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="FuelType"  matInput placeholder="Type of Fuel">
+      </mat-form-field>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="ManufactureYear"  matInput placeholder="Year of Manufacture">
+      </mat-form-field>
+    </mat-list-item>
+
+    <!-- <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="RegistrationDate"  matInput placeholder="Registered Date">
+      </mat-form-field>
+    </mat-list-item> -->
+
+    <mat-list-item>
+        <mat-form-field >
+         <input  formControlName="RegistrationDate"  matInput [matDatepicker]="picker" placeholder="Registered Date">
+         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+         <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+      </mat-list-item>
+
+    <mat-list-item>
+      <mat-form-field >
+       <input  formControlName="Institute"  matInput placeholder="Institute to which the vehicle has been registered">
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>  
+  </mat-card>
+</div>
+  
+    <div class="button-row" >
+      <button type="submit"  [disabled]="!vehicleForm.valid" mat-raised-button color="primary">Create</button>
+      <button mat-raised-button color="warn" >Cancel</button>
+  </div>  
+    
+</form>

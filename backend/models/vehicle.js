@@ -3,44 +3,34 @@ const mongoose = require('mongoose');
 const vehicleSchema = new mongoose.Schema({
     _id:{
         type:String,
-        required:true,
     },
     VehicleType:{
         type:String,
-        required:true,
     },
-    // RegNo:{
-    //     type:String,
-    //     required:true,
-    // },
-    // EngineNo:{
-    //     type:String,
-    //     required:true,
-    // },
-    // ChassisNo:{
-    //     type:String,
-    //     required:true,
-    // },
-    // NoofSeats:{
-    //     type:Number,
-    //     required:true,
-    // },
-    // FuelType:{
-    //     type:String,
-    //     required:true,
-    // },
-    // ManufactureYear:{
-    //     type:Number,
-    //     required:true,
-    // },
-    // RegistrationDate:{
-    //     type:Date,
-    //     required:true
-    // },
-    // Institute:{
-    //     type:String,
-    //     required:true
-    // }
+    RegNo:{
+        type:String,
+    },
+    EngineNo:{
+        type:String,
+    },
+    ChassisNo:{
+        type:String,
+    },
+    NoofSeats:{
+        type:Number,
+    },
+    FuelType:{
+        type:String,
+    },
+    ManufactureYear:{
+        type:Number,
+    },
+    RegistrationDate:{
+        type:Date,
+    },
+    Institute:{
+        type:String,
+    }
 });
 
 const Vehicle = mongoose.model('vehicle',vehicleSchema);

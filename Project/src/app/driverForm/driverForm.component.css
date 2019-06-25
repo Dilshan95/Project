@@ -1,0 +1,43 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+  } 
+
+.full-width-table {
+    width: 100%;
+  }
+  .data-table{
+    width:80%;
+    margin: 30px auto;
+  }
+  
+  .mat-form-field {
+    width: 30%;
+    min-width: 300px;
+  }
+ .mat-list-item{
+    margin-top: 25px;
+ }
+ 
+ .button-row button{
+   position: relative;
+   left:45%;
+   margin: 5px;
+}
+
+.mat-expansion-panel{
+  margin-left: 24px
+}
+.driver-form {
+  max-width: 400px;
+
+}
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}

@@ -5,6 +5,7 @@
     height: 50px;
     padding: 0px;
     width: 50px;
+    margin-left: -20px;
   }
   .navbar-header {
     width: 0%;
@@ -12,10 +13,12 @@
     float: inline-end;
   }
   .nav-item button{
-    color: #8b6f47;
+    /* color: #8b6f47; */
+    color : #ffffff;
   }
   .nav-item button:hover{
-    background-color: #ffef96;
+    /* background-color: #ffef96; */
+    background-color:#3c0000;
   }
 
 

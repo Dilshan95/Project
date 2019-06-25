@@ -1,0 +1,48 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+  } 
+
+.full-width-table {
+    width: 100%;
+  }
+  .data-table{
+    width:80%;
+    margin: 30px auto;
+  }
+  
+  .mat-form-field {
+    width: 30%;
+    min-width: 400px;
+  }
+ .mat-list-item{
+    margin-top: 25px;
+ }
+
+ .button-row button{
+   position: relative;
+   left:45%;
+   margin: 5px;
+}
+
+
+#card-container {
+display: flex;
+    flex-flow: row wrap;
+      margin-bottom: 50px;    
+}
+
+.Vehicle-card{
+  width: 500px;
+}
+#XYZ{
+  margin-top: 40px;
+  margin-left: 120px;
+}
+
+#ABC{
+  margin-top: 40px;
+  margin-left: 170px;
+}
+
+
+

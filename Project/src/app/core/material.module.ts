@@ -2,13 +2,14 @@ import {NgModule} from "@angular/core";
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
-  MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule,MatSelectModule, MatListModule, MatPaginatorModule, MatSortModule, 
+  MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule,MatSelectModule, MatListModule, MatPaginatorModule, MatSortModule, MatDatepickerModule, 
 } from '@angular/material';
 @NgModule({
   imports: [
   CommonModule, 
   MatCardModule,
   MatInputModule,
+  MatDatepickerModule,
   MatButtonModule,
   MatIconModule,
   MatSelectModule,
@@ -27,6 +28,7 @@ import {
   MatButtonModule,
   MatIconModule,
   MatSelectModule,
+  MatDatepickerModule,
   MatListModule,
   MatDialogModule,
   MatToolbarModule,

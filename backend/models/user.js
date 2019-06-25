@@ -9,18 +9,24 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    NICNo:{
+        type:String,
+        required:true,
+    },
     Password:{
         type:String,
         required:true,
     },
-    Department:{
+    PhoneNumber:{
+        type:Number,
+        required:true,
+        minlength:10,
+        maxlength:10    
+    },
+    Address:{
         type:String,
         required:true,
-    },  
-    Faculty:{
-        type:String,
-        required:true,
-    } 
+   },
 });
 
 const User = mongoose.model('user',userSchema);

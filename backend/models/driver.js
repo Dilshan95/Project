@@ -9,12 +9,12 @@ const driverSchema = new mongoose.Schema({
        type:String,
        required:true,
    },
-   VehicleType:[
-    {
+   VehicleType:
+    [{
         type:String,
         required:true
-    }
-    ],
+    }]
+    ,
     PhoneNumber:{
         type:Number,
         required:true,
@@ -36,3 +36,4 @@ const Driver = mongoose.model('driver',driverSchema);
 
 
 exports.Driver = Driver; 
+exports.driverSchema = driverSchema;

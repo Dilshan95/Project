@@ -25,6 +25,15 @@ export class NavBarComponent implements OnInit {
     this.route.navigate(['/Drivers']);
   }
 
+  incumbent(){
+    this.route.navigate(['/Incumbent']);
+  }
+
+  // logOut(){
+  //   localStorage.removeItem('token');
+  //   this.route.navigate(['/login']);
+  // }
+
 
 
 }

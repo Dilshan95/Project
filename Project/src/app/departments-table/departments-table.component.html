@@ -1,0 +1,54 @@
+<div style="margin-top: 100px">
+    <div class="mat-elevation-z8 data-table">
+      <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+         
+             
+             <ng-container matColumnDef="_id">
+               <th mat-header-cell *matHeaderCellDef mat-sort-header>Department ID</th>
+               <td mat-cell *matCellDef="let row">{{row._id}}</td>
+             </ng-container>
+         
+             <ng-container matColumnDef="Name">
+               <th mat-header-cell *matHeaderCellDef mat-sort-header>Department</th>
+               <td mat-cell *matCellDef="let row">{{row.Name}}</td>
+             </ng-container>
+             
+             <ng-container matColumnDef="HODName">
+                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Head of the Department</th>
+                 <td mat-cell *matCellDef="let row">{{row.HODName}}</td>
+               </ng-container>
+  
+               <ng-container matColumnDef="HODMail">
+                   <th mat-header-cell *matHeaderCellDef mat-sort-header>HOD's Mail Address</th>
+                   <td mat-cell *matCellDef="let row">{{row.HODMail}}</td>
+               </ng-container>
+  
+               <ng-container matColumnDef="HODPhoneNumber">
+                   <th mat-header-cell *matHeaderCellDef mat-sort-header>HOD's Phone Number</th>
+                   <td mat-cell *matCellDef="let row">{{row.HODPhoneNumber}}</td>
+               </ng-container>
+  
+               <ng-container matColumnDef="faculty">
+                   <th mat-header-cell *matHeaderCellDef mat-sort-header>Faculty</th>
+                   <td mat-cell *matCellDef="let row">{{row.faculty.Name}}</td>
+               </ng-container>
+
+               <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-stroked-button color="primary" (click)="onUpdate(row)">Update</button>
+                </td>
+              </ng-container>
+
+             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   </table>
+         
+   <mat-paginator #paginator
+       [length]="dataSource.data.length"
+       [pageIndex]="0"
+       [pageSize]="50"
+       [pageSizeOptions]="[25, 50, 100, 250]">
+   </mat-paginator>
+  </div> 
+  </div>
