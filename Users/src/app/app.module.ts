@@ -11,13 +11,20 @@ import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleModule, RecurrenceEditorModule,DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import {DatePickerAllModule} from '@syncfusion/ej2-angular-calendars';
+import { VehicleSelectionComponent } from './vehicleSelection/vehicleSelection.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       LoginComponent,
       NavBarComponent,
-      HomeComponent
+      HomeComponent,
+      ScheduleComponent,
+      VehicleSelectionComponent
    ],
    imports: [
       BrowserModule,
@@ -36,9 +43,19 @@ import { HttpClientModule } from '@angular/common/http';
       MatTableModule,
       MatPaginatorModule,
       MatSortModule,
-      HttpClientModule
+      HttpClientModule,
+      ScheduleModule,
+      RecurrenceEditorModule,
+      DropDownListModule,
+      DatePickerAllModule
    ],
-   providers: [],
+   providers: [
+      DayService,
+      WeekService,
+      WorkWeekService,
+      MonthService,
+      MonthAgendaService
+   ],
    bootstrap: [
       AppComponent
    ]

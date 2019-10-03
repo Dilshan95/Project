@@ -1,0 +1,25 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Department ID</th>
+        <th scope="col">Department</th>
+        <th scope="col">Head of Department</th>
+        <th scope="col">HOD's Mail Address</th>
+        <th scope="col">HOD's Phone Number</th>
+        <th scope="col">Faculty</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor= "let department of departments; index as i">
+        <td> {{department._id}}</td>
+        <td> {{department.Name}}</td>
+        <td> {{department.HODName}}</td>             
+        <td> {{department.HODMail}}</td>
+        <td> {{department.HODPhoneNumber}}</td>
+        <td> {{department.faculty.Name}}</td>
+        <td><button mat-stroked-button color="primary" (click)="onUpdate(department)">Update</button></td>
+      </tr>
+  </table>
+  </div>

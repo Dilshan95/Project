@@ -24,5 +24,8 @@ getOneDriver(driverId) {
 updateDriver(changedDriver,driverId){
   return this.http.put(this.baseUrl + 'drivers/'+driverId,changedDriver);
 }
+deleteDriver(driver){
+  return this.http.delete(this.baseUrl + 'drivers/'+ driver)
+}
 
 }

@@ -17,7 +17,7 @@ export class VehicleUpdateComponent implements OnInit {
   vehicleForm=new FormGroup(
     { 
     VehicleType: new FormControl(''),
-    RegNo: new FormControl(''),
+    // RegNo: new FormControl(''),
     EngineNo: new FormControl(''),
     ChassisNo: new FormControl(''),
     NoofSeats: new FormControl(''),
@@ -47,7 +47,7 @@ export class VehicleUpdateComponent implements OnInit {
    this.vehicleForm.setValue({
    
     VehicleType:vehicle.VehicleType,
-    RegNo:vehicle.RegNo,
+    // RegNo:vehicle.RegNo,
     EngineNo:vehicle.EngineNo,
     ChassisNo:vehicle.ChassisNo,
     NoofSeats:vehicle.NoofSeats,

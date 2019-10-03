@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DialogService } from '../_services/dialog.service';
 
 @Component({
   selector: 'app-navBar',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private route : Router) { }
+  constructor(private route : Router,private dialogService:DialogService ) { }
 
   ngOnInit() {
   }
@@ -34,6 +35,18 @@ export class NavBarComponent implements OnInit {
   //   this.route.navigate(['/login']);
   // }
 
+  logout(){
 
+
+    this.dialogService.openConfirmDialog('Are you sure you want to log out?')
+    .afterClosed().subscribe(res =>{
+      console.log(res);
+      if(res){
+      
+        localStorage.removeItem('token');
+        this.route.navigate(['']);
+   }
+  });  
+  }
 
 }

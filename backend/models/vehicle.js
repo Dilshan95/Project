@@ -7,9 +7,9 @@ const vehicleSchema = new mongoose.Schema({
     VehicleType:{
         type:String,
     },
-    RegNo:{
-        type:String,
-    },
+    // RegNo:{
+    //     type:String,
+    // },
     EngineNo:{
         type:String,
     },
@@ -30,6 +30,10 @@ const vehicleSchema = new mongoose.Schema({
     },
     Institute:{
         type:String,
+    },
+    HasADriver:
+    {
+        type:Boolean
     }
 });
 

@@ -1,9 +1,93 @@
 <mat-tab-group mat-align-tabs="start">
-    <mat-tab label="All Reservations"></mat-tab>
-    <mat-tab label="Confirmed Reservations"></mat-tab>
-    <mat-tab label="Pending Reservations"></mat-tab>
+    <mat-tab label="All Reservations">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Departure Date</th>
+              <th scope="col">Vehicle Type</th>
+              <th scope="col">Vehicle Number</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Arrival Date</th>
+              <th scope="col">View Reservation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active" *ngFor= "let reservation of reservations; index as i">
+              <td> {{reservation.StartDay}}</td>
+              <td> {{reservation.Vehicle.VehicleType}}</td>
+              <td> {{reservation.Vehicle._id}}</td>             
+              <td> {{reservation.From}}</td>
+              <td> {{reservation.To}}</td>
+              <td> {{reservation.EndDay}}</td>
+              <td><button   (click)="viewReservation(reservation)">View Reservation</button></td>
+            </tr>
+        </table>
+        </div>
+    </mat-tab>
+
+
+    <mat-tab label="Confirmed Reservations">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Departure Date</th>
+              <th scope="col">Vehicle Type</th>
+              <th scope="col">Vehicle Number</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Arrival Date</th>
+              <!-- <th scope="col">Assigned Driver</th> -->
+              <th scope="col">View Reservation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active" *ngFor= "let reservation of confirmedreservations; index as i">
+              <td> {{reservation.StartDay}}</td>
+              <td> {{reservation.Vehicle.VehicleType}}</td>
+              <td> {{reservation.Vehicle._id}}</td>             
+              <td> {{reservation.From}}</td>
+              <td> {{reservation.To}}</td>
+              <td> {{reservation.EndDay}}</td>
+              <!-- <td> </td> -->
+              <td><button   (click)="viewReservation(reservation)">View Reservation</button></td>
+            </tr>
+        </table>
+        </div>
+    </mat-tab>
+
+    
+    <mat-tab label="Pending Reservations">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Departure Date</th>
+              <th scope="col">Vehicle Type</th>
+              <th scope="col">Vehicle Number</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Arrival Date</th>
+              <th scope="col">View Reservation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active" *ngFor= "let reservation of pendingreservations; index as i">
+              <td> {{reservation.StartDay}}</td>
+              <td> {{reservation.Vehicle.VehicleType}}</td>
+              <td> {{reservation.Vehicle._id}}</td>             
+              <td> {{reservation.From}}</td>
+              <td> {{reservation.To}}</td>
+              <td> {{reservation.EndDay}}</td>
+              <td><button   (click)="viewReservation(reservation)">View Reservation</button></td>
+            </tr>
+        </table>
+        </div>
+    </mat-tab>
   </mat-tab-group>
-<app-Reservations_Table></app-Reservations_Table>
+
 
 
   

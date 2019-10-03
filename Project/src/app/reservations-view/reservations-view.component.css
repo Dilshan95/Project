@@ -1,0 +1,49 @@
+/* #card-container {
+  display: flex;
+      flex-flow: row wrap;
+        margin-bottom: 50px;    
+  }
+
+
+.Reservation-card{
+  width: 230px;
+}
+
+#firstHalf{
+    margin-top: 40px;
+    margin-left: 120px;
+  }
+#secondHalf{
+    margin-top: 40px;
+    margin-left: 0%;
+  }
+
+#thirdHalf{
+    margin-top: 40px;
+    margin-left: 180px;
+  }  
+
+#fourthHalf{
+    margin-top: 40px;
+    margin-left: 0%;
+  }  */
+
+  table{
+    width: 800px;
+    margin-left: 25%;
+    margin-top: 10px;
+    align-self: auto;
+  }
+
+  .middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #approve{
+    visibility: visible;
+  }
+
+  #vcForward{
+    visibility: visible;
+  }

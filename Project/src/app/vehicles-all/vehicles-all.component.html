@@ -1,0 +1,33 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Registered Number</th>
+        <th scope="col">Type of Vehicle</th>
+        <th scope="col">Engine No</th>
+        <th scope="col">Chassis No</th>
+        <th scope="col">No.of Seats</th>
+        <th scope="col">Type of Fuel</th>
+        <th scope="col">Year of Manufacture</th>
+        <th scope="col">Registered Date</th>
+        <th scope="col">Institute</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor= "let vehicle of vehicles; index as i">
+        <td> {{vehicle._id}}</td>
+        <td> {{vehicle.VehicleType}}</td>
+        <td> {{vehicle.EngineNo}}</td>             
+        <td> {{vehicle.ChassisNo}}</td>
+        <td> {{vehicle.NoofSeats}}</td>
+        <td> {{vehicle.FuelType}}</td>  
+        <td> {{vehicle.ManufactureYear}}</td>  
+        <td> {{vehicle.RegistrationDate}}</td>  
+        <td> {{vehicle.Institute}}</td>  
+        <td><button mat-stroked-button color="primary" (click)="onUpdate(vehicle)">Update</button>
+          <button mat-stroked-button color="warn" (click)="deleteVehicle(vehicle,i)" style="margin-right:10px;">Delete</button>
+        </td>
+      </tr>
+  </table>
+  </div>

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const {Vehicle}=require('./vehicle');
+
 const driverSchema = new mongoose.Schema({
     _id:{
        type:String,
@@ -13,8 +15,13 @@ const driverSchema = new mongoose.Schema({
     [{
         type:String,
         required:true
-    }]
-    ,
+    }],
+    vehicle:{
+        type:String,
+        ref:Vehicle,
+       },
+    
+
     PhoneNumber:{
         type:Number,
         required:true,

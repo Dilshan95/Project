@@ -18,7 +18,7 @@ export class VehiclesTableComponent implements OnInit {
   data;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['_id','VehicleType', 'RegNo','EngineNo','ChassisNo','NoofSeats','FuelType','ManufactureYear','RegistrationDate','Institute','actions'];
+  displayedColumns = ['_id','VehicleType','EngineNo','ChassisNo','NoofSeats','FuelType','ManufactureYear','RegistrationDate','Institute','actions'];
   constructor(private vehicelService:VehicleService,private dialog : MatDialog,private route:Router){}
   ngOnInit() {
     this.getVehicle();

@@ -32,7 +32,17 @@ import { FacultyTableComponent } from './faculty-table/faculty-table.component';
 import { VehicleUpdateComponent } from './vehicleUpdate/vehicleUpdate.component';
 import { DepartmentUpdateComponent } from './departmentUpdate/departmentUpdate.component';
 import { FacultyUpdateComponent } from './faculty-update/faculty-update.component';
-
+import { ReservationsViewComponent } from './reservations-view/reservations-view.component';
+import { DriverTableComponent } from './driver-table/driver-table.component';
+import { FacultyAllComponent } from './faculty-all/faculty-all.component';
+import { DepartmentAllComponent } from './department-all/department-all.component';
+import { VehiclesAllComponent } from './vehicles-all/vehicles-all.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
+import { DialogDeleteConfirmComponent } from './dialog-delete-confirm/dialog-delete-confirm.component';
+import { DialogDeleteMessageComponent } from './dialog-delete-message/dialog-delete-message.component';
+import { DvcDetailsComponent } from './dvc-details/dvc-details.component';
 
 
 @NgModule({
@@ -55,7 +65,17 @@ import { FacultyUpdateComponent } from './faculty-update/faculty-update.componen
       FacultyTableComponent,
       VehicleUpdateComponent,
       DepartmentUpdateComponent,
-      FacultyUpdateComponent
+      FacultyUpdateComponent,
+      ReservationsViewComponent,
+      DriverTableComponent,
+      FacultyAllComponent,
+      DepartmentAllComponent,
+      VehiclesAllComponent,
+      ConfirmDialogComponent,
+      MessageDialogComponent,
+      DialogDeleteConfirmComponent,
+      DialogDeleteMessageComponent,
+      DvcDetailsComponent
    ],
    imports: [
       BrowserModule,
@@ -79,7 +99,8 @@ import { FacultyUpdateComponent } from './faculty-update/faculty-update.componen
       MatExpansionModule,
       MatCheckboxModule,
       MatDatepickerModule,
-      MatNativeDateModule
+      MatNativeDateModule,
+      MatAutocompleteModule
    ],
    providers: [
       VehicleService,
@@ -88,6 +109,12 @@ import { FacultyUpdateComponent } from './faculty-update/faculty-update.componen
    bootstrap: [
       AppComponent
    ],
-   entryComponents:[DepartmentsTableComponent,DepartmentUpdateComponent],
+   entryComponents:[DepartmentsTableComponent,
+      DepartmentUpdateComponent,
+      ConfirmDialogComponent,
+      MessageDialogComponent,//fordialogboxes,
+      FacultyUpdateComponent
+      
+   ],
 })
 export class AppModule { }
